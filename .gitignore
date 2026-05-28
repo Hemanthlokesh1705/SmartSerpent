@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment files
+.env
+
+# Datasets and large assets
+dataset/
+
+# Trained models and vector indexes
+src/models/*.keras
+src/models/*.pkl
+src/faiss_store/*.index
+
+# Notebook outputs and local experiments
+src/notebook/

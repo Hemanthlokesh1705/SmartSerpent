@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartSerpent | Snake Recognition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body data-page="landing">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/">SmartSerpent</a>
+        <nav class="topnav">
+          <a href="/">Home</a>
+          <a href="/predict">Get Prediction</a>
+          <a href="/details">More Details</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Field-ready snake identification</p>
+            <h1>Professional snake recognition with a cleaner rescue workflow.</h1>
+            <p class="hero-text">
+              Upload a snake photo, review the predicted species with confidence,
+              and continue into a detailed Gemini-assisted species briefing.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="/predict">Start Prediction</a>
+              <a class="button secondary" href="/details">View Detail Screen</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="stat-card">
+              <span>Model + retrieval</span>
+              <strong>Dual-signal classification</strong>
+            </div>
+            <div class="stat-card">
+              <span>Detail engine</span>
+              <strong>Gemini species summary</strong>
+            </div>
+            <div class="stat-card">
+              <span>Best for</span>
+              <strong>Rescue demos and awareness tools</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-grid">
+          <article class="feature-panel">
+            <h2>1. Upload image</h2>
+            <p>Send a clear snake image to the FastAPI backend for species prediction.</p>
+          </article>
+          <article class="feature-panel">
+            <h2>2. Review result</h2>
+            <p>See the detected snake name and confidence score in a focused results view.</p>
+          </article>
+          <article class="feature-panel">
+            <h2>3. Ask for details</h2>
+            <p>Continue to a Gemini-generated species profile with first-aid and safety notes.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 SmartSerpent. Crafted by Hemanth.</p>
+      </footer>
+    </div>
+  </body>
+</html>

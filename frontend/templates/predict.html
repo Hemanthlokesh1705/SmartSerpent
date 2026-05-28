@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartSerpent | Get Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body data-page="predict">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/">SmartSerpent</a>
+        <nav class="topnav">
+          <a href="/">Home</a>
+          <a href="/predict">Get Prediction</a>
+          <a href="/details">More Details</a>
+        </nav>
+      </header>
+
+      <main class="page-grid prediction-layout">
+        <section class="panel preview-panel">
+          <div class="preview-header">
+            <p class="eyebrow">Uploaded image</p>
+            <h2>Visual review</h2>
+          </div>
+
+          <div id="image-preview-shell" class="image-preview-shell">
+            <img
+              id="image-preview"
+              class="image-preview hidden"
+              alt="Uploaded snake preview"
+            />
+            <div id="image-placeholder" class="image-placeholder">
+              <strong>No image selected yet</strong>
+              <p>Your uploaded snake photo will appear here after selection.</p>
+            </div>
+          </div>
+
+          <div class="preview-meta">
+            <div class="mini-metric">
+              <span>Best results</span>
+              <strong>Clear scales and body pattern</strong>
+            </div>
+            <div class="mini-metric">
+              <span>Recommended</span>
+              <strong>Natural light, close framing</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel upload-panel">
+          <p class="eyebrow">Prediction workspace</p>
+          <h1>Upload a snake image</h1>
+          <p class="section-copy">
+            Use a sharp image with the head or body pattern visible for better classification quality.
+          </p>
+
+          <div class="callout-strip">
+            <div class="callout-pill">FastAPI upload</div>
+            <div class="callout-pill">Confidence scoring</div>
+            <div class="callout-pill">Gemini follow-up</div>
+          </div>
+
+          <form id="upload-form" class="upload-form">
+            <label class="dropzone" for="snake-image">
+              <input id="snake-image" name="file" type="file" accept="image/*" required />
+              <span>Select or drag an image</span>
+              <small>JPG, PNG, WEBP supported</small>
+            </label>
+
+            <div class="upload-actions">
+              <button class="button primary" type="submit">Upload and Predict</button>
+              <p id="file-name" class="file-name">No file selected</p>
+            </div>
+          </form>
+
+          <div class="tips-grid">
+            <article class="tip-card">
+              <strong>Frame the full body</strong>
+              <p>Patterns and shape improve identification confidence.</p>
+            </article>
+            <article class="tip-card">
+              <strong>Avoid motion blur</strong>
+              <p>Still images help the model detect markings more accurately.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel result-panel">
+          <div class="result-header">
+            <p class="eyebrow">Prediction output</p>
+            <h2>Latest result</h2>
+          </div>
+
+          <div id="status-message" class="status-card neutral">
+            Upload an image to see the predicted snake species.
+          </div>
+
+          <div id="prediction-card" class="prediction-card hidden">
+            <p class="result-label">Snake Name</p>
+            <h3 id="snake-name">-</h3>
+            <p class="result-label">Confidence</p>
+            <strong id="snake-confidence">-</strong>
+            <div class="confidence-bar">
+              <div id="confidence-fill" class="confidence-fill"></div>
+            </div>
+            <div class="prediction-summary">
+              <div class="summary-tile">
+                <span>Assessment</span>
+                <strong id="prediction-level">Pending</strong>
+              </div>
+              <div class="summary-tile">
+                <span>Next step</span>
+                <strong>Review details</strong>
+              </div>
+            </div>
+            <button id="details-button" class="button secondary" type="button">
+              Get More Details
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 SmartSerpent. Crafted by Hemanth.</p>
+      </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

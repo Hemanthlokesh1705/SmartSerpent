@@ -1,0 +1,6 @@
+base_model_path="src/models/trained_base_model.keras"
+faiss_index_path="src/faiss_store/snake_embeddings.index"
+dataset_path="dataset/train"
+mapping_file_path="src/utils/mapping.json"
+snake_labels="src/models/snake_labels.pkl"
+image_path="src/models/image_paths.pkl"

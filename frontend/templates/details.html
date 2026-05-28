@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartSerpent | More Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body data-page="details">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/">SmartSerpent</a>
+        <nav class="topnav">
+          <a href="/">Home</a>
+          <a href="/predict">Get Prediction</a>
+          <a href="/details">More Details</a>
+        </nav>
+      </header>
+
+      <main class="details-layout">
+        <section class="panel details-intro">
+          <p class="eyebrow">Gemini report</p>
+          <h1>Species details and response guidance</h1>
+          <p class="section-copy">
+            This page uses the most recent prediction saved in your browser and requests a structured detail summary.
+          </p>
+          <button id="load-details-button" class="button primary" type="button">
+            Get More Details
+          </button>
+          <div id="details-status" class="status-card neutral">
+            Waiting for a prediction result.
+          </div>
+        </section>
+
+        <section id="details-card" class="panel details-card hidden">
+          <div class="details-topline">
+            <div>
+              <p class="result-label">Predicted species</p>
+              <h2 id="details-snake-name">-</h2>
+            </div>
+            <div>
+              <p class="result-label">Prediction confidence</p>
+              <strong id="details-confidence">-</strong>
+            </div>
+          </div>
+
+          <div class="details-grid">
+            <article class="detail-block">
+              <h3>Classification</h3>
+              <p><strong>Canonical:</strong> <span id="canonical-name">-</span></p>
+              <p><strong>Scientific:</strong> <span id="scientific-name">-</span></p>
+              <p><strong>Habitat:</strong> <span id="habitat">-</span></p>
+            </article>
+            <article class="detail-block">
+              <h3>Risk Profile</h3>
+              <p><strong>Venomous:</strong> <span id="venomous">-</span></p>
+              <p><strong>Venom type:</strong> <span id="venom-type">-</span></p>
+              <p><strong>Emergency:</strong> <span id="emergency-priority">-</span></p>
+            </article>
+            <article class="detail-block">
+              <h3>First Aid</h3>
+              <ul id="first-aid-list" class="detail-list"></ul>
+            </article>
+            <article class="detail-block">
+              <h3>Safety Info</h3>
+              <ul id="safety-list" class="detail-list"></ul>
+            </article>
+            <article class="detail-block full-width">
+              <h3>Confidence Note</h3>
+              <p id="confidence-note">-</p>
+            </article>
+            <article class="detail-block full-width">
+              <h3>Verify Sources</h3>
+              <ul id="verify-sources-list" class="detail-list"></ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 SmartSerpent. Crafted by Hemanth.</p>
+      </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
