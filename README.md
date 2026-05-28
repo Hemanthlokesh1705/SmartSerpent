@@ -1,6 +1,6 @@
 # SmartSerpent
 
-![SmartSerpent hero](<dataset/train/King Cobra/king-cobra-head1.jpg>)
+![SmartSerpent hero](frontend/static/readme/hero-king-cobra.jpg)
 
 SmartSerpent is a FastAPI-based snake identification web app with a clean multi-page frontend built using plain HTML, CSS, and JavaScript. It combines a deep-learning baseline classifier with a cosine-similarity verification layer, then extends the result with structured species details.
 
@@ -22,7 +22,7 @@ SmartSerpent is a FastAPI-based snake identification web app with a clean multi-
 
 ## Preview
 
-![King cobra preview](<dataset/train/King Cobra/king-cobra-snake_001.jpg>)
+![King cobra preview](frontend/static/readme/preview-king-cobra.jpg)
 
 ## How It Works
 
@@ -215,5 +215,4 @@ http://127.0.0.1:8000
 
 ## Author
 Hemanth 
-
 
